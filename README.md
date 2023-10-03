@@ -12,7 +12,7 @@ Automate your Todoist tasks effortlessly using this Python script. This project 
 
 1. **Clone the Repository or Download the Script:**
    ```sh
-   git clone <repository-url>
+   git clone <https://github.com/Ranim-K/Todoist-Automator.git>
 2. **Install Prerequisites:**
    - Python 3.x
    - ['todoist_api_python']([url](https://github.com/Doist/todoist-python)https://github.com/Doist/todoist-python) library
