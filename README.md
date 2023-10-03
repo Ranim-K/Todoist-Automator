@@ -13,3 +13,15 @@ Automate your Todoist tasks effortlessly using this Python script. This project 
 1. **Clone the Repository or Download the Script:**
    ```sh
    git clone <repository-url>
+2. **Install Prerequisites:**
+   - Python 3.x
+   - ['todoist_api_python']([url](https://github.com/Doist/todoist-python)https://github.com/Doist/todoist-python) library
+     ```sh
+      pip install todoist_api_python
+3. **Run the Python Script:**
+   ```sh
+   python Password_Generator.py
+4. **Choose an Option:**
+   - Select option 1 to add a new task.
+   - Select option 2 to view today's tasks.
+     
