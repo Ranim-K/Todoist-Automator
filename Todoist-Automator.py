@@ -1,19 +1,34 @@
+# Made By Ranim
 from todoist_api_python.api import TodoistAPI
 import webbrowser
+import inquirer
+import pyfiglet 
+from colorama import Fore
 
 # Todoist API token
-api = TodoistAPI("Your_Api_Token")
+api = TodoistAPI("1f4f4e71f0f9586533c81e42cf3ada217ddc4222")
 
+def display_ascii_art():
+    ascii_art = pyfiglet.figlet_format("Todoist Automator")
+    print(Fore.RED + ascii_art)
+ 
 def task():
-    print("Welcome to Todoist task automation! ")
-    print("What do you want to do? ") 
-    print("1. Add new Task")
-    print("2. Get Today tasks")
-    action = input("> ")
-    if action == "1":
+    display_ascii_art()
+    questions = [
+        inquirer.List('choice',
+                      message="Welcome to Todoist task automation!",
+                      choices=[
+                          ("1. Add new Task", "1"),
+                          ("2. Get Today Tasks", "2")
+                      ],
+                      ), 
+    ] 
+    answers = inquirer.prompt(questions)
+    choice = answers['choice'] 
+    if choice == "1":
         while True:
             try:
-                task_title = input("Task Title (type 'exit' to finish adding tasks: ")
+                task_title = input("Task Title (type 'exit' to finish adding tasks): ")
                 if task_title.lower() == "exit":
                     break
                 else:
@@ -30,7 +45,7 @@ def task():
                         print(error)
             except Exception as error:
                 print(error)
-    elif action == "2":
+    elif choice == "2":
         try:
             todoist_url = "https://todoist.com/app/today"
             webbrowser.open(todoist_url)
