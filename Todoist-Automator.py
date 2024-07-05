@@ -6,7 +6,7 @@ import pyfiglet
 from colorama import Fore
 
 # Todoist API token
-api = TodoistAPI("1f4f4e71f0f9586533c81e42cf3ada217ddc4222")
+api = TodoistAPI("YOUR_API_KEY")
 
 def display_ascii_art():
     ascii_art = pyfiglet.figlet_format("Todoist Automator")
